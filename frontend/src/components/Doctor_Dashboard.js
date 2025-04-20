@@ -34,13 +34,6 @@ const Doctor_Dashboard = () => {
                             path="/"
                             element={
                                 <div className="dashboard-main">
-                                    <div className="doctor-profile-card">
-                                        <img src={doctor1} alt="Dr. Martin Deo" className="doctor-image" />
-                                        <div className="doctor-info">
-                                            <h2 className="doctor-name">Dr. Martin Deo</h2>
-                                            <p className="doctor-qual">MBBS, MD (Cardiology)</p>
-                                        </div>
-                                    </div>
 
                                     <div className="grid-cards">
                                         <div className="card" onClick={() => navigate('/doctor/appointments')}>

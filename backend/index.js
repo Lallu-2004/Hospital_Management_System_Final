@@ -295,7 +295,7 @@ const sendImmediateTestAlerts = async () => {
     const query = `
       SELECT * FROM doctor_weekly_report 
       WHERE severity IN ('Medium', 'High') 
-      AND test_created_at >= NOW() - INTERVAL 10 MINUTE
+      AND test_created_at >= NOW() - INTERVAL 1 DAY
     `;
 
     const recentRows = await new Promise((resolve, reject) => {
@@ -413,6 +413,8 @@ const sendImmediateTestAlerts = async () => {
 //   }
 // };
 
+//for 1 hr
+
 cron.schedule('0 * * * *', () => {
   console.log('Checking for test updates...');
   sendWeeklyReports(); // your existing function
@@ -421,6 +423,12 @@ cron.schedule('0 * * * *', () => {
   console.log('🕐 Checking for urgent test reports ...');
   sendImmediateTestAlerts();
 });
+
+//for 1 min
+// cron.schedule('* * * * *', () => {
+//   console.log('🕐 Checking for urgent test reports ...');
+//   sendImmediateTestAlerts();
+// });
 
 
 app.get('/api/doctor-details', authMiddleware('frontdesk'), (req, res) => {

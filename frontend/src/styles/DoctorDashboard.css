@@ -11,7 +11,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(to right, #e0f2f1, #e8f5e9);
-    padding-top: 70px; /* Space for fixed navbar */
+    padding-top: 70px;
 }
 
 .doctor-dashboard {
@@ -147,7 +147,6 @@ body {
     font-weight: 500;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .dashboard-container {
         flex-direction: column;

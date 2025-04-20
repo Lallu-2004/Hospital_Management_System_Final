@@ -106,7 +106,7 @@ const Patient_Dashboard = () => {
                             path="/"
                             element={
                                 <div className="dashboard-main">
-                                    <h2 className="welcome-text-large">Welcome Kenny Sebastian</h2>
+                                    <h2 className="welcome-text-large">Welcome!</h2>
                                     <div className="grid-cards">
                                         <div className="card" onClick={() => navigate('/patient/book')}>
                                             <h3 className="card-title">Book My Appointment</h3>

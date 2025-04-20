@@ -30,9 +30,7 @@ const db = require('../db');
 
 const authMiddleware = (allowedRoles = []) => async (req, res, next) => {
   const token = req.cookies.token;
-console.log("ppppp",token);
   if (!token){
-    console.log("qqqq");
     return res.status(401).json({ message: 'No token provided' });
   } 
 
@@ -53,7 +51,6 @@ console.log("ppppp",token);
    
     
     if (!rows.length || rows[0].session_token !== token) {
-      console.log("rrrrrrrr");
       res.clearCookie('token');
       return res.status(401).json({ message: 'Session expired. Please log in again.' });
     }

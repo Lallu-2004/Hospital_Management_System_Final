@@ -20,9 +20,8 @@ const Sidebar = () => (
     <ul className="frontDeskSidebarNav">
       <li><Link to="/frontdesk/book-appointment">Book Appointment</Link></li>
       <li><Link to="/frontdesk/admit-patient">Admit Patient</Link></li>
-      <li><Link to="/frontdesk/doctor-status">Doctor Status</Link></li>
       <li><Link to="/frontdesk/room-status">Room Status</Link></li>
-      <li><Link to="/frontdesk/view-appointments">View Appointments</Link></li>
+      <li><Link to="/frontdesk/view-appointments">Patient Queue</Link></li>
       <li><Link to="/frontdesk/admitted-patients">Admitted Patient List</Link></li>
       <li><Link to="/frontdesk/prescriptions-list">To be Admitted List</Link></li>
       <li><Link to="/frontdesk/view-patient-details">Patient Details List</Link></li>
@@ -260,33 +259,6 @@ const AdmitPatient = () => {
   );
 };
 
-const DoctorStatus = () => (
-  <div className="frontDeskFormCard">
-    <h2>Doctor Status</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Doctor</th>
-          <th>Specialization</th>
-          <th>Next Slot</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Dr. Smith</td>
-          <td>Cardiology</td>
-          <td>11:00 AM</td>
-        </tr>
-        <tr>
-          <td>Dr. Adams</td>
-          <td>Neurology</td>
-          <td>Tomorrow 2:00 PM</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-);
-
 const ViewAppointments = () => {
   const [appointments, setAppointments] = useState([]);
   useEffect(() => {
@@ -301,7 +273,7 @@ const ViewAppointments = () => {
   }, []); 
   return (
     <div className="frontDeskFormCard">
-      <h2>Upcoming Appointments</h2>
+      <h2>Patients Queue</h2>
       <table>
         <thead>
           <tr>
@@ -488,11 +460,10 @@ const DashboardMain = () => {
   const navigate = useNavigate();
   return (
     <div className="frontDeskMainCards">
-      <h2 className="frontDeskWelcomeText">WELCOME FRONT DESK</h2>
+      <h2 className="frontDeskWelcomeText">WELCOME!</h2>
       <div className="frontDeskCards">
         <div className="frontDeskCard" onClick={() => navigate("/frontdesk/book-appointment")}> <h3>Book Appointment</h3><p>Schedule a patient</p> </div>
         <div className="frontDeskCard" onClick={() => navigate("/frontdesk/admit-patient")}> <h3>Admit Patient</h3><p>Admit to a ward</p> </div>
-        <div className="frontDeskCard" onClick={() => navigate("/frontdesk/doctor-status")}> <h3>Doctor Status</h3><p>Check availability</p> </div>
         <div className="frontDeskCard" onClick={() => navigate("/frontdesk/room-status")}> <h3>Room Status</h3><p>See free rooms</p> </div>
         <div className="frontDeskCard" onClick={() => navigate("/frontdesk/view-appointments")}> <h3>View Appointments</h3><p>Upcoming visits</p> </div>
         <div className="frontDeskCard" onClick={() => navigate("/frontdesk/admitted-patients")}> <h3>Admitted Patient List</h3><p>Current admissions</p> </div>
@@ -516,7 +487,6 @@ const FrontDesk = () => {
             <Route path="admit-patient" element={<AdmitPatient />} />
             <Route path="view-patient-details" element={<ViewPatientDetails />} />
             <Route path="view-doctor-details" element={<ViewDoctorDetails/>} />
-            <Route path="doctor-status" element={<DoctorStatus />} />
             <Route path="room-status" element={<RoomStatus />} />
             <Route path="view-appointments" element={<ViewAppointments />} />
             <Route path="admitted-patients" element={<AdmittedPatients />} />

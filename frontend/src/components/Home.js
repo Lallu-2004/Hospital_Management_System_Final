@@ -127,7 +127,7 @@ function Home() {
                 }}>
                     <h1 style={{
                         fontSize: "56px",
-                        color: "#ffffff",
+                        color: "#004d40",
                         fontWeight: "700",
                         textShadow: "2px 2px 6px rgba(0,0,0,0.5)",
                         marginBottom: "20px",
@@ -137,7 +137,7 @@ function Home() {
                     </h1>
                     <p style={{
                         fontSize: "24px",
-                        color: "#f0f0f0",
+                        color: "#004d40",
                         fontWeight: "400",
                         lineHeight: "1.6",
                         textShadow: "1px 1px 4px rgba(0,0,0,0.4)",
