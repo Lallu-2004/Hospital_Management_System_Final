@@ -1,0 +1,65 @@
+.table-container, .form-container {
+    background: rgba(255, 255, 255, 0.4);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    max-width: 900px;
+    margin: auto;
+}
+
+h2 {
+    color: #00796b;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+.styled-table th,
+.styled-table td {
+    border: 1px solid #ccc;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.styled-table th {
+    background-color: #00796b;
+    color: white;
+}
+
+.styled-table tr:nth-child(even) {
+    background-color: #f0fdf4;
+}
+
+.prescription-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.prescription-form input,
+.prescription-form textarea {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.prescription-form button {
+    background-color: #00796b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.prescription-form button:hover {
+    background-color: #004d40;
+}

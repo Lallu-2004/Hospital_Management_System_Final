@@ -1,0 +1,70 @@
+/* CommonForm.css */
+
+.form-container {
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-container h2 {
+    text-align: center;
+    color: #00695c;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.styled-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.styled-form label {
+    font-weight: 500;
+    color: #004d40;
+}
+
+.styled-form input,
+.styled-form textarea,
+.styled-form select {
+    padding: 10px 14px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    background: rgba(255, 255, 255, 0.6);
+    transition: border-color 0.3s;
+}
+
+.styled-form input:focus,
+.styled-form textarea:focus,
+.styled-form select:focus {
+    border-color: #00796b;
+    outline: none;
+}
+
+.styled-form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.styled-form button {
+    padding: 12px;
+    background-color: #00796b;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.styled-form button:hover {
+    background-color: #004d40;
+}

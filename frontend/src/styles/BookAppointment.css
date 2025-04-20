@@ -1,0 +1,59 @@
+.appointment-container {
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    padding: 30px;
+    background: rgba(0, 128, 128, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    color: #004d40;
+    /* Dark Teal Text */
+    text-align: center;
+}
+
+.appointment-container h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #00796b;
+    /* Teal heading */
+}
+
+.appointment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.appointment-form input,
+.appointment-form select {
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.6);
+    outline: none;
+    color: #004d40;
+}
+
+.appointment-form button {
+    padding: 10px;
+    border: none;
+    background: linear-gradient(to right, #26a69a, #00796b);
+    /* Teal gradient */
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.appointment-form .back-btn {
+    background: rgba(0, 150, 136, 0.2);
+    /* Light teal transparent */
+    color: #004d40;
+}
+
+.appointment-form button:hover {
+    transform: scale(1.05);
+}
